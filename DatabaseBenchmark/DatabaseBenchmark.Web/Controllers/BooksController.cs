@@ -32,6 +32,7 @@ namespace DatabaseBenchmark.Web.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult GenerateBook(GenerateBookVM model)
         {
             if(ModelState.IsValid)

@@ -13,17 +13,32 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="bin/Antlr3.Runtime.pdb">
       <publishTime>12/31/2020 18:12:21</publishTime>
     </File>
+    <File Include="bin/Autofac.dll">
+      <publishTime>09/28/2020 18:37:00</publishTime>
+    </File>
+    <File Include="bin/Autofac.Integration.Mvc.dll">
+      <publishTime>09/28/2020 21:55:52</publishTime>
+    </File>
+    <File Include="bin/Autofac.Integration.Mvc.pdb">
+      <publishTime>09/28/2020 21:55:52</publishTime>
+    </File>
+    <File Include="bin/Autofac.pdb">
+      <publishTime>09/28/2020 18:37:00</publishTime>
+    </File>
     <File Include="bin/DatabaseBenchmark.Core.dll">
-      <publishTime>01/02/2021 16:58:35</publishTime>
+      <publishTime>01/03/2021 11:54:09</publishTime>
+    </File>
+    <File Include="bin/DatabaseBenchmark.Core.dll.config">
+      <publishTime>01/03/2021 10:27:43</publishTime>
     </File>
     <File Include="bin/DatabaseBenchmark.Core.pdb">
-      <publishTime>01/02/2021 16:58:35</publishTime>
+      <publishTime>01/03/2021 11:54:09</publishTime>
     </File>
     <File Include="bin/DatabaseBenchmark.Web.dll">
-      <publishTime>01/02/2021 16:58:36</publishTime>
+      <publishTime>01/03/2021 12:03:29</publishTime>
     </File>
     <File Include="bin/DatabaseBenchmark.Web.pdb">
-      <publishTime>01/02/2021 16:58:36</publishTime>
+      <publishTime>01/03/2021 12:03:29</publishTime>
     </File>
     <File Include="bin/DnsClient.dll">
       <publishTime>03/31/2020 21:28:58</publishTime>
@@ -238,6 +253,9 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="bin/System.Buffers.dll">
       <publishTime>12/31/2020 18:12:21</publishTime>
     </File>
+    <File Include="bin/System.Diagnostics.DiagnosticSource.dll">
+      <publishTime>04/14/2020 22:49:20</publishTime>
+    </File>
     <File Include="bin/System.Memory.dll">
       <publishTime>12/31/2020 18:12:21</publishTime>
     </File>
@@ -332,7 +350,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>12/31/2020 18:12:21</publishTime>
     </File>
     <File Include="Logs/log.txt">
-      <publishTime>01/02/2021 15:27:06</publishTime>
+      <publishTime>01/03/2021 12:04:43</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
       <publishTime>12/31/2020 18:12:21</publishTime>
@@ -401,7 +419,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>12/31/2020 18:12:21</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>01/02/2021 16:58:36</publishTime>
+      <publishTime>01/03/2021 12:05:38</publishTime>
     </File>
   </ItemGroup>
 </Project>
