@@ -1,4 +1,5 @@
 ﻿using Autofac;
+using DatabaseBenchmark.Core.DbConnection;
 using DatabaseBenchmark.Core.Entity;
 using DatabaseBenchmark.Core.Repositories;
 using DatabaseBenchmark.Core.Services;
@@ -16,8 +17,10 @@ namespace DatabaseBenchmark.Core
         {
             builder.RegisterType<RootBookService>().As<IRootBookService>()
                 .InstancePerLifetimeScope();
-            //builder.RegisterType<Repository<RootBook>>().As<IRepository<RootBook>>()
-            //    .InstancePerLifetimeScope();
+            builder.RegisterType<Repository<RootBook>>().As<IRepository<RootBook>>()
+                .WithParameter(new TypedParameter(typeof(string), "RootBook"))
+                .WithParameter(new TypedParameter(typeof(MongoDbConnection), new MongoDbConnection()))
+                .InstancePerLifetimeScope();
 
             base.Load(builder);
         }
