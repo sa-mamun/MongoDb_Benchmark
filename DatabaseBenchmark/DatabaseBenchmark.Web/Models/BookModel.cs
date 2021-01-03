@@ -27,7 +27,7 @@ namespace DatabaseBenchmark.Web.Models
             int flag = 0, limit = 100000;
             string finalStartTime = "", finalEndTime = "";
             TimeSpan timeSpan;
-            TimeSpan finalCount = new TimeSpan(0, 0, 0);
+            TimeSpan finalTimeCount = new TimeSpan(0, 0, 0);
             var randomBookGenerator = new RandomBookGenerator();
 
             while (total >= limit)
@@ -69,7 +69,7 @@ namespace DatabaseBenchmark.Web.Models
                 finalEndTime = endTime;
 
                 timeSpan = DateTime.Parse(endTime).Subtract(DateTime.Parse(startTime));
-                finalCount = finalCount.Add(timeSpan);
+                finalTimeCount = finalTimeCount.Add(timeSpan);
             }
 
             if(total != 0 && total < 100000)
@@ -110,10 +110,10 @@ namespace DatabaseBenchmark.Web.Models
 
                 timeSpan = DateTime.Parse(endTime).Subtract(DateTime.Parse(startTime));
 
-                finalCount = finalCount.Add(timeSpan);
+                finalTimeCount = finalTimeCount.Add(timeSpan);
             }
 
-            return (finalStartTime, finalEndTime ,finalCount, RootBooks);
+            return (finalStartTime, finalEndTime , finalTimeCount, RootBooks);
         }
 
     }

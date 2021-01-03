@@ -54,6 +54,7 @@ namespace DatabaseBenchmark.Web.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult GetBook(GetValueVM model)
         {
             if (ModelState.IsValid)
@@ -72,10 +73,8 @@ namespace DatabaseBenchmark.Web.Controllers
 
                     if (result != null)
                     {
-                        string value = JsonConvert.SerializeObject(result.BookValue);
-                        var json = JsonConvert.DeserializeObject<BookJso>(value);
                         _logger.Info("Get Value duration: " + duration.ToString());
-                        return Json(json);
+                        return Json(result.BookValue);
                     }
 
                     _logger.Info("Invalid Key Found duration: " + duration.ToString());
