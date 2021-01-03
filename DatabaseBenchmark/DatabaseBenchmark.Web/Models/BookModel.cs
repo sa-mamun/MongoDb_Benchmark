@@ -33,7 +33,6 @@ namespace DatabaseBenchmark.Web.Models
                 {
                     string key = Guid.NewGuid().ToString();
                     var bookList = randomBookGenerator.GenerateBooks();
-                    //var json = GenerateKeyValue(bookList, key);
 
                     var bookJso = new BookJso
                     {
@@ -75,7 +74,6 @@ namespace DatabaseBenchmark.Web.Models
                 {
                     string key = Guid.NewGuid().ToString();
                     var bookList = randomBookGenerator.GenerateBooks();
-                    //var json = GenerateKeyValue(bookList, key);
 
                     var bookJso = new BookJso
                     {
@@ -112,25 +110,5 @@ namespace DatabaseBenchmark.Web.Models
             return (finalStartTime, finalEndTime ,finalCount, RootBooks);
         }
 
-
-        public string GenerateKeyValue(List<Book> books, string key)
-        {
-            GenerateKeyValueBooks = new List<BookJso>();
-
-            var bookJso = new BookJso
-            {
-                Key = key,
-                Books = books
-            };
-            string json = ConvertObjToJson(bookJso);
-
-            return json;
-        }
-
-        public string ConvertObjToJson(BookJso bookJsoLists)
-        {
-            string json = JsonConvert.SerializeObject(bookJsoLists);
-            return json;
-        }
     }
 }

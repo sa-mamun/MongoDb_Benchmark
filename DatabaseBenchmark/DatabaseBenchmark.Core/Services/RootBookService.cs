@@ -11,7 +11,8 @@ namespace DatabaseBenchmark.Core.Services
 {
     public class RootBookService : IRootBookService
     {
-        private readonly IRepository<RootBook> _repository = new Repository<RootBook>("RootBook", new MongoDbConnection());
+        static string tableName = "RootBook";
+        private readonly IRepository<RootBook> _repository = new Repository<RootBook>(tableName, new MongoDbConnection());
 
         public void AddRootBook(List<RootBook> rootBooks)
         {
