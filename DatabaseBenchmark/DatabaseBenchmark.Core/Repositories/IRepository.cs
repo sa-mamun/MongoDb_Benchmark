@@ -10,7 +10,7 @@ namespace DatabaseBenchmark.Core.Repositories
     public interface IRepository<T>
     {
         void Insert(List<T> entity);
-        T GetObject(string id);
+        Task<T> GetObjectAsync(Expression<Func<T, bool>> predicate = null);
         //void Update(T entity);
         //void Delete(T entity);
         //T GetById(int id);

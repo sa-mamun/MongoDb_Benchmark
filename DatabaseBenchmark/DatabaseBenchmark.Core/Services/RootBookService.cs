@@ -1,5 +1,6 @@
 ﻿using DatabaseBenchmark.Core.DbConnection;
 using DatabaseBenchmark.Core.Entity;
+using DatabaseBenchmark.Core.Exceptions;
 using DatabaseBenchmark.Core.Repositories;
 using System;
 using System.Collections.Generic;
@@ -23,9 +24,14 @@ namespace DatabaseBenchmark.Core.Services
             _repository.Insert(rootBooks);
         }
 
-        public RootBook GetBookById(string id)
+        public async Task<RootBook> GetBookByIdAsync(string id)
         {
-            return _repository.GetObject(id);
+            var result = await _repository.GetObjectAsync(x => x.Id == id);
+            if(result == null)
+            {
+                throw new CustomInvalidException("Invalid Book Key");
+            }
+            return result;
         }
     }
 }

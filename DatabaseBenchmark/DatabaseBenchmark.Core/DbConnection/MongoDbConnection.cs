@@ -14,7 +14,7 @@ namespace DatabaseBenchmark.Core.DbConnection
 
         public MongoDbConnection()
         {
-            var client = new MongoClient();
+            var client = new MongoClient("mongodb://oslAdmin:DevOps.osl01@192.168.2.57:27017/?authSource=admin");
             db = client.GetDatabase(DatabaseName);
         }
     }

@@ -1,12 +1,20 @@
-09:42:01,860 [5] INFO - Invalid Key Found duration: 00:00:00
-09:42:11,785 [5] INFO - Invalid Key Found duration: 00:00:00
-09:42:23,679 [9] INFO - Invalid Key Found duration: 00:00:00
-09:42:59,492 [5] INFO - Get Value duration: 00:00:00
-09:43:03,654 [5] INFO - Invalid Key Found duration: 00:00:00
-09:43:05,775 [5] INFO - Invalid Key Found duration: 00:00:00
-11:54:47,071 [5] INFO - Invalid Key Found duration: 00:00:00
-11:54:54,619 [5] INFO - Invalid Key Found duration: 00:00:00
-11:55:03,451 [7] INFO - Invalid Key Found duration: 00:00:00
-11:55:17,133 [5] INFO - Get Value duration: 00:00:00
-11:55:19,993 [6] INFO - Invalid Key Found duration: 00:00:00
-12:04:43,447 [7] INFO - Get Value duration: 00:00:00
+09:10:12,952 [9] INFO - Get Value duration: 00:00:24
+09:14:58,729 [6] INFO - Get Value duration: 00:00:02
+09:21:36,881 [16] INFO - Get Value duration: 00:00:07
+09:25:47,711 [6] INFO - Get Value duration: 00:00:00
+09:28:14,198 [7] INFO - Get Value duration: 00:00:05
+09:31:39,420 [7] INFO - Get Value duration: 00:00:00
+09:34:46,689 [6] INFO - Get Value duration: 00:00:00
+09:35:34,570 [7] INFO - Get Value duration: 00:00:00
+09:50:14,283 [6] INFO - Get Value duration: 00:00:02
+10:05:32,519 [7] INFO - Get Value duration: 00:00:24
+10:06:30,742 [6] INFO - Get Value duration: 00:00:02
+10:16:47,266 [6] INFO - Get Value duration: 00:00:12
+10:17:46,753 [13] INFO - Get Value duration: 00:00:00
+10:42:57,510 [6] INFO - Get Value duration: 00:00:00
+10:49:14,907 [7] INFO - Get Value duration: 00:00:50
+12:00:39,316 [7] INFO - Get Value duration: 00:00:10
+14:24:17,546 [13] INFO - Get Value duration: 00:00:00
+15:30:20,561 [6] INFO - Invalid Key Found duration: 00:00:00
+15:30:26,637 [6] INFO - Get Value duration: 00:00:00
+15:30:28,062 [15] INFO - Invalid Key Found duration: 00:00:00

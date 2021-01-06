@@ -33,14 +33,15 @@ namespace DatabaseBenchmark.Core.Repositories
             }
         }
 
-        public T GetObject(string id)
+        public async Task<T> GetObjectAsync(Expression<Func<T, bool>> predicate = null)
         {
             var collection = _connection.db.GetCollection<T>(_table);
-            var filter = Builders<T>.Filter.Eq("Id", id);
+            //var filter = Builders<T>.Filter.Eq("Id", id);
             try
             {
-                var result = collection.Find(filter).FirstOrDefault();
-                return result;
+                var task = await collection.FindAsync<T>(predicate);
+                return task.FirstOrDefault();
+                
             }
             catch (Exception ex)
             {

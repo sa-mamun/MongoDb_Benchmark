@@ -10,6 +10,6 @@ namespace DatabaseBenchmark.Core.Services
     public interface IRootBookService
     {
         void AddRootBook(List<RootBook> rootBooks);
-        RootBook GetBookById(string id);
+        Task<RootBook> GetBookByIdAsync(string id);
     }
 }

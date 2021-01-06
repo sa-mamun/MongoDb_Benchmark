@@ -1,4 +1,5 @@
 ﻿using DatabaseBenchmark.Core;
+using DatabaseBenchmark.Core.Exceptions;
 using DatabaseBenchmark.Web.Models;
 using log4net;
 using Newtonsoft.Json;
@@ -7,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 
@@ -32,7 +34,6 @@ namespace DatabaseBenchmark.Web.Controllers
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public ActionResult GenerateBook(GenerateBookVM model)
         {
             if(ModelState.IsValid)
@@ -54,8 +55,7 @@ namespace DatabaseBenchmark.Web.Controllers
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult GetBook(GetValueVM model)
+        public async Task<ActionResult> GetBook(GetValueVM model)
         {
             if (ModelState.IsValid)
             {
@@ -65,7 +65,7 @@ namespace DatabaseBenchmark.Web.Controllers
 
                     string startTime = DateTime.Now.ToString("h:mm:ss tt");
 
-                    var result = getValueVM.GetBookValue(model.BookKey);
+                    var result = await getValueVM.GetBookValue(model.BookKey);
 
                     string endTime = DateTime.Now.ToString("h:mm:ss tt");
                     // Calculating TimeSpan
@@ -78,6 +78,10 @@ namespace DatabaseBenchmark.Web.Controllers
                     }
 
                     _logger.Info("Invalid Key Found duration: " + duration.ToString());
+                }
+                catch(CustomInvalidException ex)
+                {
+                    ModelState.AddModelError("", ex.Message);
                 }
                 catch (Exception ex)
                 {
